@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CI/CD 示範專案</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      color: #333;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+    }
+    .card {
+      background: #f9f9f9;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+    .api-link {
+      display: block;
+      margin-bottom: 10px;
+      color: #0066cc;
+    }
+  </style>
+</head>
+<body>
+  <h1>CI/CD 示範專案</h1>
+  
+  <div class="card">
+    <h2>API 端點</h2>
+    <a href="/api/status" class="api-link">/api/status - 檢查 API 狀態</a>
+    <a href="/api/users" class="api-link">/api/users - 獲取所有用戶</a>
+    <a href="/api/users/1" class="api-link">/api/users/1 - 獲取特定用戶</a>
+    <a href="/health" class="api-link">/health - 健康檢查</a>
+    <a href="/users-page" class="api-link">/users-page - 用戶列表頁面</a>
+  </div>
+  
+  <div class="card">
+    <h2>關於此專案</h2>
+    <p>這是一個用於學習 CI/CD 的示範專案。包含了 Express 應用程式、自動化測試和部署流程。</p>
+  </div>
+</body>
+</html>
