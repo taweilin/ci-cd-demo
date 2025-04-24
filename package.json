@@ -5,12 +5,14 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "jest --detectOpenHandles"
+    "test": "jest --detectOpenHandles",
+    "lint": "eslint ."
   },
   "dependencies": {
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "eslint": "^9.25.1",
     "jest": "^27.0.6",
     "supertest": "^6.1.6"
   }

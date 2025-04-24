@@ -20,4 +20,13 @@ describe("GET /", () => {
     expect(response.status).toBe(200);
     expect(response.text).toBe("Hello CI/CD World!");
   });
+
+  // 在 test/app.test.js 中添加
+  it('應該回傳 API 狀態', async () => {
+    const response = await request(app).get('/api/status');
+    expect(response.status).toBe(200);
+    expect(response.body).toHaveProperty('status');
+    expect(response.body.status).toBe('online');
+  });
 });
+
