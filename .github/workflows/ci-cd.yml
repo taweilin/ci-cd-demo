@@ -1,0 +1,26 @@
+# 建立 CI/CD 工作流程檔案
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: 設置 Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: "14"
+        
+    - name: 安裝相依套件
+      run: npm ci
+      
+    - name: 執行測試
+      run: npm test'
