@@ -1,4 +1,3 @@
-# 建立 CI/CD 工作流程檔案
 name: CI/CD Pipeline
 
 on:
@@ -17,10 +16,12 @@ jobs:
     - name: 設置 Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: "14"
+        node-version: '14'
         
     - name: 安裝相依套件
-      run: npm ci
-      
+      run: |
+        npm install
+        npm ci
+        
     - name: 執行測試
-      run: npm test'
+      run: npm test
